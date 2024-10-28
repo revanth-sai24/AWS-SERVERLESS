@@ -21,13 +21,7 @@
   - Serverless Framework
   - zappa
   - awsgi
-    @REM - Chalice
-    @REM - Claudia.js
-    @REM - cloudformation
-    @REM - Terraform
-    @REM - AWS SAM (Serverless Application Model)
-    @REM - AWS CDK (Cloud Development Kit)
-    @REM - AWS Amplify
+  - Chalice
 
 - Zappa:
 
@@ -38,24 +32,64 @@
   Configuration with Zappa:
 
   - create a flask app
-  - install flask [pip install flask]
     ```bash 
     pip install flask
     ```
-  - create a virtual environment [python -m venv venv]
-  - activate the virtual environment [.\venv\Scripts\activate]
-  - install zappa [pip install zappa]
-  - create a zappa configuration file [zappa init]: This will create a zappa_settings.json file that contains the configuration settings for the application.
-  - deploy the application [zappa deploy dev]: This will create the Lambda function and other resources required to run the application.
-  - update the application [zappa update dev]: This will update the Lambda function with the latest code changes.
-  - undeploy the application [zappa undeploy dev]: This will remove the Lambda function and other resources created by Zappa.
-  - view the logs [zappa tail dev]: This will display the logs from the Lambda function.
-  - invoke the function [zappa invoke dev 'app.app']: This will invoke the Lambda function with the specified event data.
-  - rollback to a previous version [`zappa rollback dev`]: This will rollback to a previous version of the Lambda function.
-  - view the status `zappa status dev`: This will display the status of the deployment.
-  - delete the application 'zappa delete dev': This will delete the application and all associated resources.
-  - file structure:
+  - create a virtual environment
+    ```bash
+    python -m venv venv
+    ```
+  - install zappa
+    ```bash
+    pip install zappa
+    ```
+  - create a zappa configuration file
+    ```bash
+    zappa init
+    ```
+    This will create a zappa_settings.json file that contains the configuration settings for the application.
+  - deploy the application
+    ```bash
+    zappa deploy dev
+    ```
+    This will deploy the application to AWS Lambda and create the necessary resources.
+  - update the application
+    ```bash
+    zappa update dev
+    ```
+    This will update the application with any changes made to the code.
+  - undeploy the application
+    ```bash
+    zappa undeploy dev
+    ```
+    This will undeploy the application and delete all associated resources.
+  - view the logs
+    ```bash
+    zappa tail dev
+    ```
+    This will display the logs for the application.
+  - invoke the function
+    ```bash
+    zappa invoke dev
+    ```
+    This will invoke the Lambda function.
+  - rollback to a previous version 
+    ```bash
+    zappa rollback dev
+    ```
+    This will rollback to a previous version of the application.
+  - view the status
+    ```bash
+    zappa status dev
+    ```
+    This will display the status of the application.
+  - delete the application
+    ```bash
+    zappa delete dev
+    ```
+    This will delete the application and all associated resources.
 
+  - file structure:
   ```python
       my-flask-app/
       ├── app.py
@@ -64,7 +98,7 @@
       └── zappa_settings.json
   ```
 
-  - code structure:
+  - Code Structure:
   - app.py:
 
   ```python
