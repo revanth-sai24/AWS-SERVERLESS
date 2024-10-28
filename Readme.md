@@ -89,11 +89,12 @@
     ```
     This will delete the application and all associated resources.
 
+- The following is an example of a simple Flask application that can be deployed to AWS Lambda with Zappa.
+
   - file structure:
   ```python
       my-flask-app/
       ├── app.py
-      ├── wsgi.py
       ├── requirements.txt
       └── zappa_settings.json
   ```
@@ -110,17 +111,6 @@
       return 'Hello, World!'
   ```
 
-  ### wsgi.py:
-
-  ```python
-
-  from app import app
-
-  def lambda_handler(event, context):
-      return app(event, context)
-
-  ```
-
   ### requirements.txt:
 
   ```python
@@ -133,7 +123,7 @@
   ```python
       {
       "dev": {
-          "app_function": "wsgi.lambda_handler",
+          "app_function": "app.app",
           "aws_region": "us-east-1",
           "profile_name": "default",
           "project_name": "my-zappa-app",
@@ -143,6 +133,26 @@
       }
 
   ```
+  - The app_function key specifies the entry point for the application. In this case, it is app.app, which refers to the app object in the app.py file.
+  - The aws_region key specifies the AWS region where the application will be deployed. In this case, it is us-east-1.
+  - The profile_name key specifies the AWS profile to use when deploying the application. In this case, it is default.
+  - The project_name key specifies the name of the project. In this case, it is my-zappa-app.
+  - The runtime key specifies the Python runtime to use. In this case, it is python3.8.
+  - The s3_bucket key specifies the name of the S3 bucket where the application will be deployed. In this case, it is my-zappa-app-bucket.
+
+## Deploying a Flask Application to AWS Lambda with Zappa:
+    - When deploying to AWS Lambda with Zappa, Zappa handles the WSGI interface and the Lambda function setup for you. You can deploy your Flask application to AWS Lambda with Zappa by running the following commands.
+    - after the testing is done and the application is ready to deploy, run the following commands:
+    ```bash
+    zappa deploy dev
+    ```
+    - This will deploy the application to AWS Lambda and create the necessary resources. You can then access the application using the URL provided by Zappa.
+    - To update the application with any changes made to the code, run the following command:
+    ```bash
+    zappa update dev
+    ```
+
+
 
 ## Serverless Framework:
 
@@ -154,7 +164,7 @@
   - Chalice is a Python library that makes it easy to build serverless applications on AWS Lambda. It provides a simple, yet powerful, way to define and deploy serverless applications using a configuration file.
   - Chalice supports multiple programming languages, including Python, Node.js, and Java. It also provides a plugin system that allows you to extend its functionality with custom plugins.
   - Chalice is a popular choice for building serverless applications because it simplifies the process of deploying and managing serverless applications. It provides a high-level abstraction that allows you to focus on writing code, rather than managing infrastructure.
-  
+
 ## awsgi:
   - awsgi is a Python library that makes it easy to deploy WSGI-compatible Python applications on AWS Lambda. It allows you to deploy applications built with frameworks such as Flask and Django as serverless applications.
   - awsgi handles the deployment and configuration of the Lambda function, API Gateway, and other AWS resources required to run the application. It also provides features such as automatic scaling, logging, and monitoring.
