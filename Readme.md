@@ -98,8 +98,8 @@
       └── zappa_settings.json
   ```
 
-  - Code Structure:
-  - app.py:
+  ## Code Structure:
+  ### app.py:
 
   ```python
   from flask import Flask
@@ -110,7 +110,7 @@
       return 'Hello, World!'
   ```
 
-  - wsgi.py:
+  ### wsgi.py:
 
   ```python
 
@@ -121,14 +121,14 @@
 
   ```
 
-  -requirements.txt:
+  ### requirements.txt:
 
   ```python
   Flask==1.1.2
   zappa
   ```
 
-  - zappa_settings.json:
+  ### zappa_settings.json:
 
   ```python
       {
