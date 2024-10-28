@@ -8,13 +8,13 @@
 ## Components of a Simple AWS Serverless Architecture:
 
   ### AWS Lambda:
-    - Function as a Service (FaaS): AWS Lambda allows you to run code without managing servers. we write our code in a Lambda function, and AWS handles the execution in response to events.
-    - Lambda functions are triggered by events such as HTTP requests, changes to data in an S3 bucket, or updates to a DynamoDB table.
+  - Function as a Service (FaaS): AWS Lambda allows you to run code without managing servers. we write our code in a Lambda function, and AWS handles the execution in response to events.
+- Lambda functions are triggered by events such as HTTP requests, changes to data in an S3 bucket, or updates to a DynamoDB table.
   ### Amazon API Gateway:
-    - Amazon: API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
-    - HTTP Requests: API Gateway can be used to create RESTful APIs that can be integrated with Lambda functions.
+  - Amazon: API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
+  - HTTP Requests: API Gateway can be used to create RESTful APIs that can be integrated with Lambda functions.
   ### Amazon S3:
-    - Amazon S3 is a scalable object storage service that allows you to store and retrieve data. It can be used to store static assets such as images, videos, and HTML files.
+  - Amazon S3 is a scalable object storage service that allows you to store and retrieve data. It can be used to store static assets such as images, videos, and HTML files.
 
 - I have come to known there are couple of tools where we can use to deploy serverless applications. Some of them are:
 
