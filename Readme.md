@@ -47,9 +47,9 @@
   - undeploy the application [zappa undeploy dev]: This will remove the Lambda function and other resources created by Zappa.
   - view the logs [zappa tail dev]: This will display the logs from the Lambda function.
   - invoke the function [zappa invoke dev 'app.app']: This will invoke the Lambda function with the specified event data.
-  - rollback to a previous version [zappa rollback dev]: This will rollback to a previous version of the Lambda function.
-  - view the status [zappa status dev]: This will display the status of the deployment.
-  - delete the application [zappa delete dev]: This will delete the application and all associated resources.
+  - rollback to a previous version [`zappa rollback dev`]: This will rollback to a previous version of the Lambda function.
+  - view the status [`zappa status dev`]: This will display the status of the deployment.
+  - delete the application [`zappa delete dev`]: This will delete the application and all associated resources.
   - file structure:
 
   ```python
