@@ -141,13 +141,13 @@
   - The s3_bucket key specifies the name of the S3 bucket where the application will be deployed. In this case, it is my-zappa-app-bucket.
 
 ## Deploying a Flask Application to AWS Lambda with Zappa:
-    - When deploying to AWS Lambda with Zappa, Zappa handles the WSGI interface and the Lambda function setup for you. You can deploy your Flask application to AWS Lambda with Zappa by running the following commands.
-    - after the testing is done and the application is ready to deploy, run the following commands:
+  - When deploying to AWS Lambda with Zappa, Zappa handles the WSGI interface and the Lambda function setup for you. You can deploy your Flask application to AWS Lambda with Zappa by running the following commands.
+  - After the testing is done and the application is ready to deploy, run the following commands:
     ```bash
     zappa deploy dev
     ```
-    - This will deploy the application to AWS Lambda and create the necessary resources. You can then access the application using the URL provided by Zappa.
-    - To update the application with any changes made to the code, run the following command:
+  - This will deploy the application to AWS Lambda and create the necessary resources. You can then access the application using the URL provided by Zappa.
+  - To update the application with any changes made to the code, run the following command:
     ```bash
     zappa update dev
     ```
