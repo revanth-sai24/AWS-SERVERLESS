@@ -144,17 +144,18 @@
 
   ```
 
-- Serverless Framework:
+## Serverless Framework:
 
   - The Serverless Framework is an open-source framework that makes it easy to build serverless applications on AWS, Azure, and Google Cloud Platform. It provides a simple, yet powerful, way to define and deploy serverless applications using a configuration file.
   - The Serverless Framework supports multiple programming languages, including Node.js, Python, Java, and Go. It also provides a plugin system that allows you to extend its functionality with custom plugins.
   - The Serverless Framework is a popular choice for building serverless applications because it simplifies the process of deploying and managing serverless applications. It provides a high-level abstraction that allows you to focus on writing code, rather than managing infrastructure.
 
-- Chalice:
+## Chalice:
   - Chalice is a Python library that makes it easy to build serverless applications on AWS Lambda. It provides a simple, yet powerful, way to define and deploy serverless applications using a configuration file.
   - Chalice supports multiple programming languages, including Python, Node.js, and Java. It also provides a plugin system that allows you to extend its functionality with custom plugins.
   - Chalice is a popular choice for building serverless applications because it simplifies the process of deploying and managing serverless applications. It provides a high-level abstraction that allows you to focus on writing code, rather than managing infrastructure.
-- awsgi:
+  
+## awsgi:
   - awsgi is a Python library that makes it easy to deploy WSGI-compatible Python applications on AWS Lambda. It allows you to deploy applications built with frameworks such as Flask and Django as serverless applications.
   - awsgi handles the deployment and configuration of the Lambda function, API Gateway, and other AWS resources required to run the application. It also provides features such as automatic scaling, logging, and monitoring.
   - awsgi is a popular choice for deploying Python applications on AWS Lambda because it simplifies the deployment process and provides a high-level abstraction that allows you to focus on writing code.
