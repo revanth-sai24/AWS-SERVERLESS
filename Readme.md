@@ -37,7 +37,11 @@
 
   Configuration with Zappa:
 
-  - create a flask app [pip install flask]
+  - create a flask app
+  - install flask [pip install flask]
+    ```bash 
+    pip install flask
+    ```
   - create a virtual environment [python -m venv venv]
   - activate the virtual environment [.\venv\Scripts\activate]
   - install zappa [pip install zappa]
