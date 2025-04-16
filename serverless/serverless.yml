@@ -1,0 +1,33 @@
+service: flask-lambdas-api-serverless
+
+frameworkVersion: '^4.4.7'
+
+package:
+  individually: true
+  exclude:
+    - .venv/**
+
+provider:
+  name: aws
+  region: eu-north-1
+  stage: dev
+  environment:
+    STRIP_STAGE_PATH: yes
+  runtime: python3.11
+
+functions:
+  api:
+    handler: wsgi_handler.handler
+    events:
+      - httpApi: '*'
+
+custom:
+  wsgi:
+    app: app.app
+  pythonRequirements:
+    zip: true
+    slim: true
+
+plugins:
+  - serverless-wsgi
+  - serverless-python-requirements

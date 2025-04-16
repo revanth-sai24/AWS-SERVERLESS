@@ -89,7 +89,7 @@
     ```
     This will delete the application and all associated resources.
 
-- The following is an example of a simple Flask application that can be deployed to AWS Lambda with Zappa.
+  - The following is an example of a simple Flask application that can be deployed to AWS Lambda with Zappa.
 
   - file structure:
   ```python
@@ -140,7 +140,7 @@
   - The runtime key specifies the Python runtime to use. In this case, it is python3.8.
   - The s3_bucket key specifies the name of the S3 bucket where the application will be deployed. In this case, it is my-zappa-app-bucket.
 
-## Deploying a Flask Application to AWS Lambda with Zappa:
+  ## Deploying a Flask Application to AWS Lambda with Zappa:
   - When deploying to AWS Lambda with Zappa, Zappa handles the WSGI interface and the Lambda function setup for you. You can deploy your Flask application to AWS Lambda with Zappa by running the following commands.
   - After the testing is done and the application is ready to deploy, run the following commands:
     ```bash
@@ -159,6 +159,20 @@
   - The Serverless Framework is an open-source framework that makes it easy to build serverless applications on AWS, Azure, and Google Cloud Platform. It provides a simple, yet powerful, way to define and deploy serverless applications using a configuration file.
   - The Serverless Framework supports multiple programming languages, including Node.js, Python, Java, and Go. It also provides a plugin system that allows you to extend its functionality with custom plugins.
   - The Serverless Framework is a popular choice for building serverless applications because it simplifies the process of deploying and managing serverless applications. It provides a high-level abstraction that allows you to focus on writing code, rather than managing infrastructure.
+
+    - The following is an example of a simple serverless Flask application that can be deployed to AWS Lambda with the Serverless Framework.
+    - file structure:
+    ```python
+    my-serverless-app/
+    ├── app.py
+    ├── serverless.yml
+    └── requirements.txt
+    ```
+    ### app.py:
+    ```python
+    from flask import Flask
+    app = Flask(__name__)
+    
 
 ## Chalice:
   - Chalice is a Python library that makes it easy to build serverless applications on AWS Lambda. It provides a simple, yet powerful, way to define and deploy serverless applications using a configuration file.
